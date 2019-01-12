@@ -36,7 +36,10 @@ RSpec.configure do |config|
 
   config.infer_spec_type_from_file_location!
 
-  config.include RequestSpecHelper, type: :request
+  #config.include RequestSpecHelper, type: :request
 
   config.filter_rails_from_backtrace!
+
+  config.include RequestSpecHelper
+  config.include ControllerSpecHelper
 end
